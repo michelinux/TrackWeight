@@ -45,13 +45,44 @@ xcode-select --install
 ```bash
 brew install --cask krishkrosh/apps/trackweight
 ```
- 
+
 ### Option 3: Build from Source
 
 1. Clone this repository
 2. Open `TrackWeight.xcodeproj` in Xcode
 3. Disable App Sandbox in the project settings (required for trackpad access)
 4. Build and run the application
+
+### Option 4: Build for MacOS 13 and Intel
+
+1.  **Clone patched OpenMultitouchSupport and TrackWeight:**
+    ```bash
+    git clone --branch macos13 https://github.com/michelinux/OpenMultitouchSupport.git
+    git clone --branch macos13 https://github.com/michelinux/TrackWeight.git
+    ```
+
+2.  **Build OpenMultitouchSupport:**
+    ```bash
+    cd OpenMultitouchSupport
+    sh build_framework.sh
+    cd -
+    ```
+
+3.  **Build TrackWeight:**
+    ```bash
+    cd TrackWeight
+    xcodebuild -project TrackWeight.xcodeproj -scheme TrackWeight -configuration Release build
+    ```
+
+3.  **Sign for Local Execution (Ad-hoc):**
+    ```bash
+       codesign': codesign --force --deep --sign - ~/Library/Developer/Xcode/DerivedData/TrackWeight-*/Build/Products/Release/TrackWeight.app
+    ```
+
+4.  **Run the Application:**
+    ```bash
+    open ~/Library/Developer/Xcode/DerivedData/TrackWeight-*/Build/Products/Release/TrackWeight.app
+    ```
 
 ## Automated Builds
 
