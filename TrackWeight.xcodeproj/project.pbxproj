@@ -19,11 +19,12 @@
 		77292AA42B931E05001CA3F6 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77292AA52B931E05001CA3F6 /* ScaleView.swift */; };
 		77292AA62B931E06001CA3F6 /* ScaleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77292AA72B931E06001CA3F6 /* ScaleViewModel.swift */; };
 		93A095122E33359600E1E1D1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A095112E33359600E1E1D1 /* SettingsView.swift */; };
-		93A095162E33624200E1E1D1 /* OpenMultitouchSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 93A095152E33624200E1E1D1 /* OpenMultitouchSupport */; };
+		
 		93ABD0212E2E01E200668D4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ABD0202E2E01E200668D4F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77292A962B931C84001CA3F6 /* OpenMultitouchSupport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OpenMultitouchSupport; path = OpenMultitouchSupport; sourceTree = "<group>"; };
 		77292A842B931953001CA3F6 /* TrackWeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackWeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77292A872B931953001CA3F6 /* TrackWeightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWeightApp.swift; sourceTree = "<group>"; };
 		77292A892B931953001CA3F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A095162E33624200E1E1D1 /* OpenMultitouchSupport in Frameworks */,
+				77292A9B2B931D7A001CA3F6 /* OpenMultitouchSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +57,7 @@
 		77292A7B2B931953001CA3F6 = {
 			isa = PBXGroup;
 			children = (
+				77292A962B931C84001CA3F6 /* OpenMultitouchSupport */,
 				77292A862B931953001CA3F6 /* TrackWeight */,
 				77292A852B931953001CA3F6 /* Products */,
 				77292A992B931D7A001CA3F6 /* Frameworks */,
@@ -123,7 +125,7 @@
 			);
 			name = TrackWeight;
 			packageProductDependencies = (
-				93A095152E33624200E1E1D1 /* OpenMultitouchSupport */,
+				77292A9A2B931D7A001CA3F6 /* OpenMultitouchSupport */,
 			);
 			productName = TrackWeight;
 			productReference = 77292A842B931953001CA3F6 /* TrackWeight.app */;
@@ -154,7 +156,7 @@
 			);
 			mainGroup = 77292A7B2B931953001CA3F6;
 			packageReferences = (
-				93A095142E33624200E1E1D1 /* XCRemoteSwiftPackageReference "OpenMultitouchSupport" */,
+				93A095142E33624200E1E1D1 /* XCSwiftPackageLocalReference "OpenMultitouchSupport" */,
 			);
 			productRefGroup = 77292A852B931953001CA3F6 /* Products */;
 			projectDirPath = "";
@@ -324,12 +326,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TrackWeight/TrackWeight.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 9ZRLG6277G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -338,12 +334,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.krishkrosh.trackweight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.9;
 			};
 			name = Debug;
 		};
@@ -352,12 +348,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TrackWeight/TrackWeight.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 9ZRLG6277G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -366,12 +356,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.krishkrosh.trackweight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.9;
 			};
 			name = Release;
 		};
@@ -398,24 +388,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		93A095142E33624200E1E1D1 /* XCRemoteSwiftPackageReference "OpenMultitouchSupport" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/KrishKrosh/OpenMultitouchSupport.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		93A095152E33624200E1E1D1 /* OpenMultitouchSupport */ = {
+		77292A9A2B931D7A001CA3F6 /* OpenMultitouchSupport */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 93A095142E33624200E1E1D1 /* XCRemoteSwiftPackageReference "OpenMultitouchSupport" */;
 			productName = OpenMultitouchSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+
 	};
 	rootObject = 77292A7C2B931953001CA3F6 /* Project object */;
 }
